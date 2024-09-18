@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom T-shirt Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Place Your Order</h1>
+        <h4 id="heading">Get yourself a new outfit by customizing on your own</h2>
+        <form id="orderForm" onsubmit="showSuccessMessage(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile_number">Mobile Number:</label>
+            <input type="tel" id="mobile_number" name="mobile_number" max="10" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" ></textarea>
+
+            <label for="size">T-shirt Size:</label>
+            <select id="size" name="size" required>
+                <option value="">Select size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+
+            <label for="color">T-shirt Color:</label>
+            <input type="color" id="color" name="color" value="#000000">
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+
+            <label for="customText">Custom Text:</label>
+            <textarea id="customText" name="customText" ></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="successMessage" class="success-message hidden"></p>
+    </div>
+
+    <div class="container" id="receipt">
+            
+    </div>
+
+</body>
+</html>
